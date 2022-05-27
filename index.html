@@ -10,15 +10,28 @@
 
 <body>
     <style>
+        body{
+            width: min(500px, 60vw);
+        }
+        .links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         a{
             font-size: larger;
             font-weight: bold;
-            background-color: aqua;
-            border-radius: 10px;
-            width: 300px;
+            background-color: rgb(28, 38, 129);
+            border-radius: 3px;
+            width: 400px;
+            border: 1px solid gray;
+            text-decoration: none;
+            margin: 20px;
         }
     </style>
-    esta es una pagina muestra :D
+    <h2>esta es una pagina muestra :D</h2>
+    <div class="links"></div>
     <a href="/portfolio"> vamos al portafolio </a>
     <a href="/react-fetch-exercise"> vamos al portafolio </a>
     <a href="/APIRest_DogsPage"> vamos al portafolio </a>
