@@ -2,7 +2,7 @@ const menu = document.getElementById('navbar');
 const indicador = document.getElementById('indicador');
 const secciones = document.querySelectorAll('.seccion');
 
-
+console.log(secciones)
 
 // TAMANIO DE LA BARRA INDICADOR DEL MENU
 let indicadorSize = menu.querySelector('a').offsetWidth;
@@ -14,9 +14,10 @@ indicador.style.transform = `translate(${indicadorSize}px)`
 let indexSeccionActiva;
 
 // OBSERVER (HACE TRACK A LA PAGINA PARA MOVER EL INDICADOR DE BOTON)
+
 const observer = new IntersectionObserver((entradas, observer) => {
     entradas.forEach(entrada => {
-        // console.log(entrada.target)
+        console.log(entrada.target.id)
         if (entrada.isIntersecting) {
             // console.log(entrada.target)
             //OBTENEMOS LA SECCION QUE ESTA ENTRANDO A PANTALLA
@@ -52,6 +53,10 @@ const onResize = () => {
     //cambiamos la nueva posicion
     indicador.style.transform = `translateX(${(indicadorSize * indexSeccionActiva)}px)`
 
+
+    //
+
 }
 
 window.addEventListener('resize', onResize)
+ 
