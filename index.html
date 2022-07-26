@@ -1,479 +1,681 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="img/favicon.ico" />
     <!-- <link rel="icon" type="image/png" href="img/tab-logo.png" /> -->
 
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <!-- Boxicons stilos-->
-    <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>JS Portafolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="hero" id="welcome-section">
+      <div class="hero">
+        <h1>Julio Santacruz WebDev</h1>
+
+        <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
+      </div>
+    </header>
     <main>
-        <header class="hero" id="welcome-section">
-            <h1>Julio Santacruz WebDev</h1>
+      <nav id="navbar" aria-label="navigation bar">
+        <a href="#welcome-section"
+          ><img
+            src="img/logo_450x200_azul_trans.png"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+        <a href="#aboutme">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <span class="indicador" id="indicador"></span>
+      </nav>
+      <section class="seccion aboutme" id="aboutme">
+        <div id="aboutme-card " class="aboutme-card">
+          <div class="aboutme-img">
+            <img
+              src="img/Startup_Monochromatic.png"
+              class=""
+              alt="aboutme image"
+            />
+          </div>
+          <div class="aboutme-text" aria-level="1" aria-label="about me section">
+            <h2 aria-label="Hello, My name is Julio Santacruz">
+              Hello, My name is Julio Santacruz,<br />
+              I'm a web developer
+            </h2>
+            <p>Let me help you with your project</p>
+            <a
+              href="https://drive.google.com/file/d/1NXxmWxXeR6O4VVqPKgBcjcSI_1kAPK1p/view?usp=sharing"
+              target="_blank"
+              class="project-card-btn"
+              aria-label="You can download my resume here"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </section>
 
-            <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
-        </header>
+      <section class="seccion" id="skills">
+        <div class="skills skills-card">
+          <div class="skills-description">
+            <img src="img/img-skills.svg" alt="skills image" />
+          </div>
+          <div class="skills-box">
+            <h2>Skills</h2>
 
-        <nav id="navbar">
-            <a href="#welcome-section"><img src="img/logo_450x200_azul_trans.png" alt="logo" class="nav-logo"></a>
-            <a href="#aboutme">AboutMe</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <span class="indicador" id="indicador"></span>
-        </nav>
-
-        <section class=" seccion aboutme" id="aboutme">
-            <div id="aboutme-card " class="aboutme-card  ">
-                <div class="aboutme-img">
-                    <img src="img/Startup_Monochromatic.png" class="" alt="aboutme image">
-                </div>
-                <div class="aboutme-text">
-                    <h2>Hello, My name is Julio Santacruz,<br> I'm a web developer </h2>
-                    <p>Let me help you with your project</p>
-                    <a href="https://drive.google.com/file/d/1NXxmWxXeR6O4VVqPKgBcjcSI_1kAPK1p/view?usp=sharing" target="_blank" class="project-card-btn">Download Resume</a>
-                </div>
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="bar">
+                <div id="html-bar"></div>
+              </div>
             </div>
-        </section>
 
-        <section class="seccion  " id="skills">
-            <div class="skills skills-card">
-                <div class="skills-description">
-                    <img src="img/img-skills.svg" alt="skills image">
-                </div>
-                <div class="skills-box">
-                    <h2>Skills</h2>
-
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="html-bar"></div>
-                        </div>
-                    </div>
-
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>CSS</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="CSS-bar"></div>
-                        </div>
-                    </div>
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>Javascript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="JS-bar"></div>
-
-                        </div>
-                    </div>
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>Postgresql</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="Postgresql-bar"></div>
-                        </div>
-                    </div>
-
-                    <h2>Frameworks</h2>
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>React</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="React-bar"></div>
-
-                        </div>
-                    </div>
-
-                    <div class="skills-bar">
-                        <div class="skills-details">
-                            <span>DJango</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="bar">
-                            <div id="DJango-bar"></div>
-                        </div>
-                    </div>
-
-
-                </div>
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>CSS</span>
+                <span>80%</span>
+              </div>
+              <div class="bar">
+                <div id="CSS-bar"></div>
+              </div>
             </div>
-        </section>
-
-        <section class="seccion gallery" id="projects">
-            <div class=" ">
-                <h2>Latest projects...<span>&#160;</span></h2>
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>Javascript</span>
+                <span>80%</span>
+              </div>
+              <div class="bar">
+                <div id="JS-bar"></div>
+              </div>
             </div>
-            <div class="project-list">
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://discountscitydemo.herokuapp.com/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_discountscitys.png" alt="discounts city project" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Discounts Citys Subscription</h3>
-                            <!-- <p class="project-description">
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>Postgresql</span>
+                <span>75%</span>
+              </div>
+              <div class="bar">
+                <div id="Postgresql-bar"></div>
+              </div>
+            </div>
+
+            <h2>Frameworks</h2>
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>React</span>
+                <span>80%</span>
+              </div>
+              <div class="bar">
+                <div id="React-bar"></div>
+              </div>
+            </div>
+
+            <div class="skills-bar">
+              <div class="skills-details">
+                <span>DJango</span>
+                <span>80%</span>
+              </div>
+              <div class="bar">
+                <div id="DJango-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion gallery" id="projects">
+        <div class=" ">
+          <h2>Latest projects...<span>&#160;</span></h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://discountscitydemo.herokuapp.com/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_discountscitys.png"
+                      alt="discounts city project"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Discounts Citys Subscription</h3>
+                <!-- <p class="project-description">
                             With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-django'></i> Django</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> Ingles / English </b></p>
-                            <a href="https://discountscitydemo.herokuapp.com/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://bimcapacitacion.herokuapp.com/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_bimcapacitacion.png" alt="" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">BIMCapacitacion</h3>
-                            <!-- <p class="project-description">
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-django"></i> Django</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> Ingles / English </b></p>
+                <a
+                  href="https://discountscitydemo.herokuapp.com/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://bimcapacitacion.herokuapp.com/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_bimcapacitacion.png"
+                      alt="bim capacitacion blog live"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">BIMCapacitacion</h3>
+                <!-- <p class="project-description">
                             This project was formed to share information and tutorials about 3D modeling with Autodesk Revit
                         </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li><i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i>JS</li>
-                                <li><i class='bx bxl-django'></i> Django</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b>Spanish / Español </b></p>
-                            <a href="http://www.bimcapacitacion.com" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i>JS</li>
+                  <li><i class="bx bxl-django"></i> Django</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b>Spanish / Español </b></p>
+                <a
+                  href="http://www.bimcapacitacion.com"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
             </div>
+          </article>
+        </div>
 
-            <div class=" ">
-                <h2>Samples / Demos...<span>&#160;</span></h2>
+        <div class=" ">
+          <h2>Samples / Demos...<span>&#160;</span></h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://juliosantacruz.dev/sample_form/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_sample_form.png"
+                      alt="sample office contact form"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Responsive Contact Form</h3>
+                <!-- <p class="project-description">
+                            With this project, visitors to a business or offices can fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <!-- <li><i class='bx bxl-django'></i> Django</li> -->
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b>Spanish / Español </b></p>
+                <a
+                  href="https://juliosantacruz.dev/sample_form/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
             </div>
-            <div class="project-list">
+          </article>
 
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://juliosantacruz.dev/sample_form/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_sample_form.png" alt="office register project" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Responsive Contact Form</h3>
-                            <!-- <p class="project-description">
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://a-coworking.herokuapp.com/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_office_registration.png"
+                      alt="office register project"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Office Register</h3>
+                <!-- <p class="project-description">
                             With this project, visitors to a business or offices can fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <!-- <li><i class='bx bxl-django'></i> Django</li> -->
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b>Spanish / Español </b></p>
-                            <a href="https://juliosantacruz.dev/sample_form/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://a-coworking.herokuapp.com/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_office_registration.png" alt="office register project" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Office Register</h3>
-                            <!-- <p class="project-description">
-                            With this project, visitors to a business or offices can fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-django'></i> Django</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b>Spanish / Español </b></p>
-                            <a href="https://a-coworking.herokuapp.com/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-django"></i> Django</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b>Spanish / Español </b></p>
+                <a
+                  href="https://a-coworking.herokuapp.com/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
 
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://hogar-agneslester.herokuapp.com/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img ">
-                                    <img src="img/p_casa_hogar.png" alt="casa hogar image" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Agnes Donation Web</h3>
-                            <!-- <p class="project-description">
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://hogar-agneslester.herokuapp.com/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_casa_hogar.png"
+                      alt="casa hogar image"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Agnes Donation Web</h3>
+                <!-- <p class="project-description">
                             With this pr on and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-django'></i> Django</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> Spanish / Español  </b></p>
-                            <a href="https://hogar-agneslester.herokuapp.com/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class=" ">
-                <h2>React projects...<span>&#160;</span></h2>
-            </div>
-            <div class="project-list">
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/react-budget-app/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_budget_app.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Budget App</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> English  / Ingles</b></p>
-                            <a href="https://aramxd.github.io/react-budget-app/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/TicTacToe/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_tic_tac_toe.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Tic Tac Toe App</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> English  / Ingles</b></p>
-                            <a href="https://aramxd.github.io/TicTacToe/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/weather-page/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_weather_app.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Wheater App</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> English  / Ingles</b></p>
-                            <a href="https://aramxd.github.io/weather-page/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/react-todoapp/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_todo_app.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">To do..! App</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> Spanish  / Español</b></p>
-                            <a href="https://aramxd.github.io/react-todoapp/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/api-movies/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_apimovies.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">API Movies</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> English  / Ingles</b></p>
-                            <a href="https://aramxd.github.io/api-movies/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-card project-card-shadow ">
-                        <div class="project-card-content">
-                            <a href="https://aramxd.github.io/react-fetch-exercise/" class="" target="_blank" id="profile-link">
-                                <div class="project-card-img center-img">
-                                    <img src="img/p_presentation.png" alt="budget app" class="">
-                                </div>
-                            </a>
-                            <h3 class="project-tile">Presentation Page</h3>
-                            <!-- <p class="project-description">
-                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
-                            <ul>
-                                <li><i class='bx bxl-html5'></i> HTML </li>
-                                <li> <i class='bx bxl-css3'></i> CSS</li>
-                                <li><i class='bx bxl-javascript'></i> JS</li>
-                                <li><i class='bx bxl-react'></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="project-card-footer">
-                            <p> <b> Spanish  / Español</b></p>
-                            <a href="https://aramxd.github.io/react-fetch-exercise/" class="project-card-btn" target="_blank" id="profile-link"> View Live </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <section class="image-light">
-            <img src="img/bx-x.svg" alt="x button" class="close">
-            <img src="img/p_bimcapacitacion.png" alt="none" class="agregar-imagen">
-
-        </section>
-
-        <section class="seccion contact" id="contact">
-            <div class="contact-me">
-                <h2>Contact me</h2>
-                <a href="mailto:julio.santacruzh@gmail.com" target="_blank" class="project-card-btn">Send an Email 📧</a> or
-                <a class="  project-card-btn " href="https://www.linkedin.com/in/julio-santacruz?trk=profile-badge">
-                Linkedin  <i class='bx bxl-linkedin' ></i>
-            </a>
-            </div>
-            <div class="social-media">
-                <a href="https://github.com/aramxD" target="_blank" class="social-media-icon">
-                    <i class='bx bxl-github'></i>
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-django"></i> Django</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> Spanish / Español </b></p>
+                <a
+                  href="https://hogar-agneslester.herokuapp.com/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
                 </a>
-                <a href="https://www.facebook.com/jashxD" target="_blank" class="social-media-icon">
-                    <i class='bx bxl-facebook-circle'></i>
-                </a>
-                <a href="https://twitter.com/J_aramxD" target="_blank" class="social-media-icon">
-                    <i class='bx bxl-twitter'></i>
-                </a>
-                <a href="https://www.instagram.com/juliosantacruz.h/" target="_blank" class="social-media-icon">
-                    <i class='bx bxl-instagram'></i>
-                </a>
-                <a href="https://www.wa.link/mqz551" target="_blank" class="social-media-icon">
-                    <i class='bx bxl-whatsapp'></i>
-                </a>
-
+              </div>
             </div>
-        </section>
+          </article>
+        </div>
 
+        <div class=" ">
+          <h2>React projects...<span>&#160;</span></h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/react-budget-app/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_budget_app.png"
+                      alt="budget app project"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Budget App</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> English / Ingles</b></p>
+                <a
+                  href="https://aramxd.github.io/react-budget-app/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
 
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/TicTacToe/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_tic_tac_toe.png"
+                      alt="budget app"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Tic Tac Toe App</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> English / Ingles</b></p>
+                <a
+                  href="https://aramxd.github.io/TicTacToe/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/weather-page/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_weather_app.png"
+                      alt="weather app"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Wheater App</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> English / Ingles</b></p>
+                <a
+                  href="https://aramxd.github.io/weather-page/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/react-todoapp/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img src="img/p_todo_app.png" alt="to do app" class="" />
+                  </div>
+                </a>
+                <h3 class="project-tile">To do..! App</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> Spanish / Español</b></p>
+                <a
+                  href="https://aramxd.github.io/react-todoapp/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/api-movies/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_apimovies.png"
+                      alt="movie database app"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">API Movies</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> English / Ingles</b></p>
+                <a
+                  href="https://aramxd.github.io/api-movies/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-card project-card-shadow">
+              <div class="project-card-content">
+                <a
+                  href="https://aramxd.github.io/react-fetch-exercise/"
+                  class=""
+                  target="_blank"
+                  id="profile-link"
+                >
+                  <div class="project-card-img center-img">
+                    <img
+                      src="img/p_presentation.png"
+                      alt="presentation page app"
+                      class=""
+                    />
+                  </div>
+                </a>
+                <h3 class="project-tile">Presentation Page</h3>
+                <!-- <p class="project-description">
+                            With this pro n fill out their registration and the administrator can download the list of visitors to a spreadsheet. </p> -->
+                <ul>
+                  <li><i class="bx bxl-html5"></i> HTML</li>
+                  <li><i class="bx bxl-css3"></i> CSS</li>
+                  <li><i class="bx bxl-javascript"></i> JS</li>
+                  <li><i class="bx bxl-react"></i> React</li>
+                </ul>
+              </div>
+              <div class="project-card-footer">
+                <p><b> Spanish / Español</b></p>
+                <a
+                  href="https://aramxd.github.io/react-fetch-exercise/"
+                  class="project-card-btn"
+                  target="_blank"
+                  id="profile-link"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="seccion contact" id="contact">
+        <div class="contact-me">
+          <h2>Contact me</h2>
+          <a
+            href="mailto:julio.santacruzh@gmail.com"
+            target="_blank"
+            class="project-card-btn"
+            >Send an Email 📧</a
+          >
+          or
+          <a
+            class="project-card-btn"
+            href="https://www.linkedin.com/in/julio-santacruz?trk=profile-badge"
+          >
+            Linkedin <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+        <div class="social-media">
+          <a
+            href="https://github.com/aramxD"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/jashxD"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+          <a
+            href="https://twitter.com/J_aramxD"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/juliosantacruz.h/"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a
+            href="https://www.wa.link/mqz551"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+        </div>
+      </section>
     </main>
 
-
-
     <footer>
-        <div class="container footer-content">
-
-            <div class="footer-btn">
-                <a href="#welcome-section"><i class='bx bx-up-arrow-circle' ></i></a>
-                <p>Inicio</p>
-            </div>
+      <div class="container footer-content">
+        <div class="footer-btn">
+          <a href="#welcome-section"><i class="bx bx-up-arrow-circle"></i></a>
+          <p>Inicio</p>
         </div>
+      </div>
     </footer>
 
     <script src="main.js"></script>
     <script src="lightbox.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-</body>
-
+    <script
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
