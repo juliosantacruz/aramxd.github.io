@@ -528,6 +528,69 @@ textarea {
   padding: 5px;
   margin: 0 0 20px 0;
 }
+
+.notification{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  max-width: 400px;
+  height: 80px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background-color: #141519b6;
+  color: #f6f5f9;
+  box-shadow: 0 1px 10px rgba(0,0,0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  /* animation: fade 4s linear forwards; */
+
+
+}
+.notification .progress{
+  position: relative;
+  left: 5px;
+  bottom: 5px;
+  width: 10px;
+  height: 3px;
+  background: linear-gradient(to right, #529dbd, #2150bf );
+  border-radius: 5px;
+  /* animation: progressBar 3s .25s linear forwards; */
+}
+@keyframes fade{
+  5%{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+
+  }
+  60%{
+    background-color: #141519b6;
+  }
+  70%{
+    background-color: #00834e;
+  }
+  80%{
+    opacity: 1;
+    transform: translateY(0px);
+    background-color: #00834e;
+    color: #000;
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes progressBar{
+  to{
+    width: calc(100% - 10px);
+  }
+}
 /* FOOTER */
 
 footer {

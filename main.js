@@ -123,5 +123,15 @@ formdata.append("message", message)
       });
 
       ContactForm.classList.toggle("spread");
+      animationMessage()
 
 }
+
+function animationMessage(){
+  const notification = document.getElementById('notification')
+  const notificacionBar = document.getElementById('progress')
+
+  notification.style.animation = 'fade 5s linear forwards'
+  notificacionBar.style.animation = 'progressBar 3s .25s linear forwards'
+}
+
