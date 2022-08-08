@@ -1,5 +1,3 @@
- 
-
 html {
   scroll-behavior: smooth;
 }
@@ -185,19 +183,19 @@ nav .indicador {
   flex-direction: row;
   width: 30%;
 }
-.skillLogo{
+.skillLogo {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  
+
   width: 100px;
   height: 100px;
   border-radius: 30%;
-  border: 3px solid rgb(78,102,248);
+  border: 3px solid rgb(78, 102, 248);
   margin: 10px 0;
   background-color: white;
 }
-.skillLogoTitle{
+.skillLogoTitle {
   width: 90%;
   text-align: center;
   font-size: 20px;
@@ -206,39 +204,40 @@ nav .indicador {
   padding: 5px 10px;
   border-radius: 10px;
 }
- 
 
- 
 /* SKILLS LOGO */
-.html-logo{
-  background-image: url('./img/logo-html.svg');
+.html-logo {
+  background-image: url("img/logo-html.svg");
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.css-logo{
-  background-image: url('./img/logo-css.svg');
-  background-position: center;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-
-}
-.javascript-logo{background-image: url('./img/logo-javascript.svg');
+.css-logo {
+  background-image: url("img/logo-css.svg");
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.postgresql-logo{background-image: url('./img/logo-postgresql.svg');
+.javascript-logo {
+  background-image: url("img/logo-javascript.svg");
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.react-logo{background-image: url('./img/logo-react.svg');
+.postgresql-logo {
+  background-image: url("img/logo-postgresql.svg");
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.django-logo{background-image: url('./img/logo-django.svg');
+.react-logo {
+  background-image: url("img/logo-react.svg");
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.django-logo {
+  background-image: url("img/logo-django.svg");
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -251,7 +250,7 @@ nav .indicador {
 .skills-box {
   width: 60%;
 }
-.skills-box .skill .html5{
+.skills-box .skill .html5 {
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -259,7 +258,7 @@ nav .indicador {
   background-repeat: no-repeat;
   background-size: 100px 100px;
 }
-.skills-box img{
+.skills-box img {
   width: 200px;
   fill: #00834e;
 }
@@ -285,14 +284,12 @@ nav .indicador {
   background-color: #4e66f8;
   margin: 2px;
 }
- 
+
 #html-bar {
   animation: html-fill 5s forwards;
 }
 
-
 @keyframes html-fill {
-  
   100% {
     width: 90%;
   }
@@ -570,7 +567,7 @@ nav .indicador {
 .spread {
   transform: translate(0);
 }
-.closeIcon  {
+.closeIcon {
   text-align: right;
   font-size: 30px;
 }
@@ -607,7 +604,7 @@ textarea {
   margin: 0 0 20px 0;
 }
 
-.notification{
+.notification {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -619,53 +616,50 @@ textarea {
   border-radius: 10px;
   background-color: #141519b6;
   color: #f6f5f9;
-  box-shadow: 0 1px 10px rgba(0,0,0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0.1);
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
   /* animation: fade 4s linear forwards; */
-
-
 }
-.notification .progress{
+.notification .progress {
   position: relative;
   left: 5px;
   bottom: 5px;
   width: 10px;
   height: 3px;
-  background: linear-gradient(to right, #529dbd, #2150bf );
+  background: linear-gradient(to right, #529dbd, #2150bf);
   border-radius: 5px;
   /* animation: progressBar 3s .25s linear forwards; */
 }
-@keyframes fade{
-  5%{
+@keyframes fade {
+  5% {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
-
   }
-  60%{
+  60% {
     background-color: #141519b6;
   }
-  70%{
+  70% {
     background-color: #00834e;
   }
-  80%{
+  80% {
     opacity: 1;
     transform: translateY(0px);
     background-color: #00834e;
     color: #000;
   }
-  95%{
+  95% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
     transform: translateY(-50px);
   }
 }
-@keyframes progressBar{
-  to{
+@keyframes progressBar {
+  to {
     width: calc(100% - 10px);
   }
 }
@@ -821,7 +815,7 @@ footer {
   nav a {
     font-size: 12px;
   }
-  
+
   .social-media {
     width: 90%;
   }
