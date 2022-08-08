@@ -805,6 +805,11 @@ footer {
   .project {
     width: 90%;
   }
+  .skillLogo {
+    width: 70px;
+    height: 70px;
+    margin:  5px;
+  }
   /* CONTACT FORM */
   .contactFormCard {
     width: 80vw;
@@ -815,7 +820,13 @@ footer {
   nav a {
     font-size: 12px;
   }
-
+  .skills-description{
+    width: 90%;
+  }
+  .skillLogo {
+    width: 50px;
+    height: 50px;
+  }
   .social-media {
     width: 90%;
   }
