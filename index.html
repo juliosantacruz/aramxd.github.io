@@ -19,13 +19,17 @@
       href="https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>JS Portafolio</title>
   </head>
 
   <body>
     <header class="hero" id="welcome-section">
       <div class="hero">
-        <h1>Julio Santacruz WebDev</h1>
+        <h1 >Julio Santacruz WebDev</h1>
 
         <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
       </div>
@@ -38,10 +42,10 @@
             alt="logo"
             class="nav-logo"
         /></a>
-        <a href="#aboutme">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a class="animate__animated animate__pulse animate__infinite " href="#aboutme">About Me</a>
+        <a class="animate__animated animate__pulse animate__infinite " href="#skills">Skills</a>
+        <a class="animate__animated animate__pulse animate__infinite " href="#projects">Projects</a>
+        <a class="animate__animated animate__pulse animate__infinite " href="#contact">Contact</a>
         <span class="indicador" id="indicador"></span>
       </nav>
       <section class="seccion aboutme" id="aboutme">
@@ -59,10 +63,10 @@
               I'm a web developer
             </h2>
             <p>Let me help you with your project</p>
-            <a
+            <a 
               href="https://drive.google.com/file/d/1_0pH7I-cwbRuUnTKyiZj5WlF4kowtXkP/view?usp=sharing"
               target="_blank"
-              class="project-card-btn"
+              class=" project-card-btn"
               aria-label="You can download my resume here"
               >Download Resume</a
             >
@@ -73,7 +77,13 @@
       <section class="seccion" id="skills">
         <div class="skills skills-card">
           <div class="skills-description">
-            <img src="img/img-skills.svg" alt="skills image" />
+            <div class="animate__animated animate__swing animate__repeat-3 skillLogo html-logo"></div> 
+            <div class="animate__animated animate__swing animate__repeat-2 skillLogo css-logo"></div>
+            <div class="animate__animated animate__swing animate__infinite skillLogo javascript-logo"></div>
+            <div class="animate__animated animate__swing animate__repeat-2 skillLogo postgresql-logo"></div>
+            <div class="animate__animated animate__swing animate__infinite skillLogo react-logo"></div>
+            <div class="animate__animated animate__swing animate__infinite skillLogo django-logo"></div>
+            <!-- <img src="img/img-skills.svg" alt="skills image" /> -->
           </div>
           <div class="skills-box">
             <h2>Skills</h2>
@@ -81,17 +91,17 @@
             <div class="skills-bar">
               <div class="skills-details">
                 <span>HTML</span>
-                <span>90%</span>
+                <span></span>
               </div>
               <div class="bar">
-                <div id="html-bar"></div>
+                <div class="skillsBar" id="html-bar"></div>
               </div>
             </div>
 
             <div class="skills-bar">
               <div class="skills-details">
                 <span>CSS</span>
-                <span>80%</span>
+                <span></span>
               </div>
               <div class="bar">
                 <div id="CSS-bar"></div>
@@ -100,7 +110,7 @@
             <div class="skills-bar">
               <div class="skills-details">
                 <span>Javascript</span>
-                <span>80%</span>
+                <span></span>
               </div>
               <div class="bar">
                 <div id="JS-bar"></div>
@@ -109,7 +119,7 @@
             <div class="skills-bar">
               <div class="skills-details">
                 <span>Postgresql</span>
-                <span>75%</span>
+                <span></span>
               </div>
               <div class="bar">
                 <div id="Postgresql-bar"></div>
@@ -120,20 +130,20 @@
             <div class="skills-bar">
               <div class="skills-details">
                 <span>React</span>
-                <span>80%</span>
+                <span></span>
               </div>
               <div class="bar">
-                <div id="React-bar"></div>
+                <div class="skillsBar" id="React-bar"></div>
               </div>
             </div>
 
             <div class="skills-bar">
               <div class="skills-details">
                 <span>DJango</span>
-                <span>80%</span>
+                <span></span>
               </div>
               <div class="bar">
-                <div id="DJango-bar"></div>
+                <div class="skillsBar" id="DJango-bar"></div>
               </div>
             </div>
           </div>
@@ -603,6 +613,7 @@
           </article>
         </div>
       </section>
+
       <section class="seccion contact" id="contact">
         <div class="notification" id="notification">
           <div class="message">

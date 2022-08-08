@@ -179,7 +179,69 @@ nav .indicador {
 }
 
 .skills-description {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 30%;
+}
+.skillLogo{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  border: 3px solid rgb(78,102,248);
+  margin: 10px 0;
+  background-color: white;
+}
+.skillLogoTitle{
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+  background: rgba(49, 49, 49, 0.789);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+ 
+
+ 
+/* SKILLS LOGO */
+.html-logo{
+  background-image: url('./img/logo-html.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.css-logo{
+  background-image: url('./img/logo-css.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+.javascript-logo{background-image: url('./img/logo-javascript.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.postgresql-logo{background-image: url('./img/logo-postgresql.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.react-logo{background-image: url('./img/logo-react.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.django-logo{background-image: url('./img/logo-django.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .skills-bar {
@@ -223,12 +285,14 @@ nav .indicador {
   background-color: #4e66f8;
   margin: 2px;
 }
-
+ 
 #html-bar {
-  animation: html-fill 2s forwards;
+  animation: html-fill 5s forwards;
 }
 
+
 @keyframes html-fill {
+  
   100% {
     width: 90%;
   }
