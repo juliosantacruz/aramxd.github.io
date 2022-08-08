@@ -1,3 +1,5 @@
+ 
+
 html {
   scroll-behavior: smooth;
 }
@@ -248,6 +250,18 @@ nav .indicador {
 
 .skills-box {
   width: 60%;
+}
+.skills-box .skill .html5{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url(./img/logo-html.svg);
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+.skills-box img{
+  width: 200px;
+  fill: #00834e;
 }
 
 .skills-details {
