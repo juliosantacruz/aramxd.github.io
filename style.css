@@ -212,32 +212,29 @@ nav .indicador {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.css-logo {
-  background-image: url("img/logo-css.svg");
+.css-logo{
+  background-image: url('img/logo-css.svg');
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+.javascript-logo{background-image: url('img/logo-javascript.svg');
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.javascript-logo {
-  background-image: url("img/logo-javascript.svg");
+.postgresql-logo{background-image: url('img/logo-postgresql.svg');
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.postgresql-logo {
-  background-image: url("img/logo-postgresql.svg");
+.react-logo{background-image: url('img/logo-react.svg');
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.react-logo {
-  background-image: url("img/logo-react.svg");
-  background-position: center;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-.django-logo {
-  background-image: url("img/logo-django.svg");
+.django-logo{background-image: url('img/logo-django.svg');
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -254,7 +251,7 @@ nav .indicador {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-image: url(./img/logo-html.svg);
+  background-image: url(img/logo-html.svg);
   background-repeat: no-repeat;
   background-size: 100px 100px;
 }
