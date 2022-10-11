@@ -145,6 +145,7 @@ async function DevToPosts(URL){
     console.log(response.status)
   }else{
     DevToPosts.forEach(post=>{
+      console.log(post)
       createCard(post)
     })
     
@@ -195,7 +196,7 @@ function createCard(element){
   projectCard.append(cardFooter)
 
   const cardFooterText =document.createElement('p')
-
+  
   cardFooterText.innerText=element.tag_list
   cardFooter.append(cardFooterText)
 
