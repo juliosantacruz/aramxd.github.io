@@ -135,3 +135,71 @@ function animationMessage(){
   notificacionBar.style.animation = 'progressBar 3s .25s linear forwards'
 }
 
+const devtoUrl = 'https://dev.to/api/articles?username=julio_santacruz'
+async function DevToPosts(URL){
+  const response = await fetch(URL)
+  const DevToPosts = await response.json()
+
+
+  if(response.status !== 200){
+    console.log(response.status)
+  }else{
+    DevToPosts.forEach(post=>{
+      createCard(post)
+    })
+    
+    
+    
+  }
+
+}
+
+
+function createCard(element){
+  const devtoList = document.getElementById('DevToPost')
+
+  const linkCard = document.createElement('a')
+  linkCard.href=element.url
+  linkCard.target='_blank'
+  linkCard.className='project'
+  devtoList.append(linkCard)
+
+  const Card = document.createElement('article')
+  // Card.className = 'project'
+  linkCard.append(Card)
+
+  const projectCard = document.createElement('div')
+  projectCard.className='project-card project-card-shadow'
+  Card.append(projectCard)
+
+  const cardContent = document.createElement('div')
+  cardContent.className='project-card-content'
+  projectCard.append(cardContent)
+
+
+  const cardImage = document.createElement('div')
+  cardImage.className='project-card-img center-img'
+  const leCardImage = document.createElement('img')
+  leCardImage.src= element.social_image
+
+  cardImage.append(leCardImage)
+  projectCard.append(cardImage)
+
+  const cardTitle = document.createElement('h3')
+  cardTitle.innerText=element.title
+  cardTitle.className='project-tile'
+  projectCard.append(cardTitle)
+
+  const cardFooter = document.createElement('div')
+  cardFooter.className='project-card-footer'
+  projectCard.append(cardFooter)
+
+  const cardFooterText =document.createElement('p')
+
+  cardFooterText.innerText=element.tag_list
+  cardFooter.append(cardFooterText)
+
+}
+
+
+DevToPosts(devtoUrl)
