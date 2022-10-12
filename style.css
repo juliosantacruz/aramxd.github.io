@@ -475,7 +475,19 @@ nav .indicador {
   border: none;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
+.project-card-footer-devto {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.project-card-footer-devto p {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+project-card-footer-devto
 .image-light {
   position: fixed;
   background: rgba(0, 0, 0, 0.795);
