@@ -1,17 +1,17 @@
 //Image Projects
-import p_quimikal from "../assets/imgProjects/p_quimikal.jpg";
-import p_discounts from "../assets/imgProjects/p_discountscitys.jpg";
-import p_bimcapacitacion from "../assets/imgProjects/p_bimcapacitacion.jpg";
-import p_sampleForm from "../assets/imgProjects/p_sample_form.jpg";
-import p_sampleOffice from "../assets/imgProjects/p_office_registration.png";
-import p_agnesDonation from "../assets/imgProjects/p_casa_hogar.jpg";
-import p_budgetApp from "../assets/imgProjects/p_budget_app.png";
-import p_tiktaktoe from "../assets/imgProjects/p_tic_tac_toe.png";
-import p_wheatherApp from "../assets/imgProjects/p_weather_app.jpg";
-import p_presentation from "../assets/imgProjects/p_presentation.jpg";
-import p_apiMovies from "../assets/imgProjects/p_apimovies.jpg";
-import p_searchGif from "../assets/imgProjects/p_SearchGif.jpg";
-import p_lewallet from "../assets/imgProjects/p_lewallet.png";
+import p_quimikal from "../assets/imgProjects_min/p_quimikal.jpg";
+import p_discounts from "../assets/imgProjects_min/p_discountscitys.jpg";
+import p_bimcapacitacion from "../assets/imgProjects_min/p_bimcapacitacion.jpg";
+import p_sampleForm from "../assets/imgProjects_min/p_sample_form.jpg";
+import p_sampleOffice from "../assets/imgProjects_min/p_office_registration.png";
+import p_agnesDonation from "../assets/imgProjects_min/p_casa_hogar.jpg";
+import p_budgetApp from "../assets/imgProjects_min/p_budget_app.png";
+import p_tiktaktoe from "../assets/imgProjects_min/p_tic_tac_toe.png";
+import p_wheatherApp from "../assets/imgProjects_min/p_weather_app.jpg";
+import p_presentation from "../assets/imgProjects_min/p_presentation.jpg";
+import p_apiMovies from "../assets/imgProjects_min/p_apimovies.jpg";
+import p_searchGif from "../assets/imgProjects_min/p_SearchGif.jpg";
+import p_lewallet from "../assets/imgProjects_min/p_lewallet.png";
 
 import django from '../assets/Logos_tech/django-logo-240.png'
 import javascript from '../assets/Logos_tech/javascript-logo-240.png'
@@ -36,7 +36,7 @@ const projects = [
   {
     id: 'a',
     type: "profesional",
-    title: "Le-Wallet",
+    title: "Le-Wallet-App",
     url: "https://le-wallet.vercel.app/",
     stack: [
       { name:'React' ,icon:react },
