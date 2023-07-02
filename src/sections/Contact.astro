@@ -1,0 +1,348 @@
+---
+import githubIcon from "../assets/Logos_SocialMedia_png/github-logo-240.png";
+import linkedincon from "../assets/Logos_SocialMedia_png/linkedin-logo-240.png";
+import emailIcon from "../assets/Logos_SocialMedia_png/envelope-regular-240.png";
+import instagramIcon from "../assets/Logos_SocialMedia_png/instagram-logo-240.png";
+import whattsappIcon from "../assets/Logos_SocialMedia_png/whatsapp-logo-240.png";
+---
+
+<section id="Contact">
+    <div class="notification" id="notification">
+        <div class="message">
+            <h3>Sending 📩</h3>
+        </div>
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <h3>Contact me... how?</h3>
+    <button class="project-card-btn" id="ContactFormButton"
+        >Send me a Message 💬</button
+    >
+    <div class="socialMediaGroup">
+        <a href="https://github.com/juliosantacruz" target="_blank">
+            <div class="socialIcon">
+                <img src={githubIcon} alt="" />
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/julio-santacruz/" target="_blank">
+            <div class="socialIcon">
+                <img src={linkedincon} alt="" />
+            </div>
+        </a>
+        <a href="mailto:julio.santacruzh@gmail.com" target="_blank">
+            <div class="socialIcon">
+                <img src={emailIcon} alt="" />
+            </div>
+        </a>
+
+        <a href="https://www.wa.link/mqz551" target="_blank">
+            <div class="socialIcon">
+                <img src={whattsappIcon} alt="" />
+            </div>
+        </a>
+    </div>
+
+    <aside class="contactFormCard" id="contactFormCard">
+        <form action="." class="contactForm" id="contactForm">
+            <div class="closeIcon">x</div>
+            <div id="formTitle"></div>
+            <div id="formError"></div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" required />
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="20" rows="10"
+            ></textarea>
+
+            <button
+                id="submitContactFormButton"
+                type="button"
+                class="project-card-btn">Submit 🤖</button
+            >
+        </form>
+    </aside>
+</section>
+
+<script>
+    // Aqui esta la logica del formulario de contacto
+    const ContactFormButton: any = document.getElementById("ContactFormButton");
+    const ContactForm: any = document.getElementById("contactFormCard");
+    const SubmitContactFormButton: any = document.getElementById(
+        "submitContactFormButton"
+    );
+    const closeIcon: any = document.querySelector(".closeIcon");
+
+    // logica para cerrar modal con icono de cierre
+    closeIcon.addEventListener("click", () => {
+        ContactForm.classList.toggle("spread");
+    });
+
+    // logica para abrir modal de contacto
+    ContactFormButton.addEventListener("click", () => {
+        ContactForm.classList.toggle("spread");
+    });
+
+    // Accion de envio de formulario
+    SubmitContactFormButton.onclick = () => {
+        SubmitContactForm();
+    };
+
+    // Logica para envio de formulario
+    function SubmitContactForm() {
+        var formdata = new FormData();
+
+        var name = (document.getElementById("name") as HTMLInputElement).value;
+        var email = (document.getElementById("email") as HTMLInputElement)
+            .value;
+        var message = (document.getElementById("message") as HTMLInputElement)
+            .value;
+
+        formdata.append("full_name", name);
+        formdata.append("email", email);
+        formdata.append("message", message);
+
+        const formError = document.getElementById("formError");
+
+        var requestOptions: RequestInit = {
+            method: "POST",
+            body: formdata,
+            redirect: "follow",
+        };
+
+        fetch(
+            "https://p01--restapi--qzvdk8qp7kvm.code.run/test/api/v1/portcontact",
+            requestOptions
+        )
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.log("error", error));
+
+        const inputs: any = document.querySelectorAll(
+            "#name, #email, #message"
+        );
+
+        inputs.forEach((input: any) => {
+            input.value = "";
+        });
+
+        ContactForm.classList.toggle("spread");
+        animationMessage();
+    }
+
+    function animationMessage() {
+        const notification = document.getElementById(
+            "notification"
+        ) as HTMLInputElement;
+        const notificacionBar = (document.getElementById("progress") as HTMLInputElement);
+
+        notification.style.display = 'flex'
+        notification.style.animation = "fade 5s linear forwards";
+        notificacionBar.style.animation = "progressBar 3s .25s linear forwards";
+    }
+</script>
+
+<style>
+    section {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../assets/bg_contact.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    .project-card-btn {
+        background: #4e66f8;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-card-btn:hover,
+    .project-card-btn:focus {
+        background: #505ebb;
+    }
+    .socialMediaGroup {
+        margin: 30px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .socialIcon {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        margin: 0 10px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    .socialIcon:hover {
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.55);
+        background: #505ebb;
+    }
+    img {
+        width: 100%;
+    }
+    /* FORM DATA  */
+
+    .contactFormCard {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        max-width: 400px;
+        height: 100%;
+        background-color: #ffffff;
+        /* background-image: linear-gradient(135deg, #4b5ca7 0%rgb(118, 75, 162) 100%); */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
+        z-index: 2;
+    }
+
+    .spread {
+        transform: translate(0);
+    }
+    .closeIcon {
+        text-align: right;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .closeIcon:hover {
+        text-align: right;
+        font-size: 30px;
+        transition: ease-in;
+        transform: translateY(-4px);
+    }
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50%;
+        width: 90%;
+        margin: auto 0;
+        z-index: 3;
+        background-color: transparent;
+    }
+    input {
+        height: 30px;
+        border-radius: 7px;
+        padding: 5px;
+    }
+    label {
+        margin-top: 10px;
+        font-size: var(--size-parrafo);
+    }
+    textarea {
+        height: 100px;
+        border: 2px solid black;
+        border-radius: 7px;
+        padding: 5px;
+        margin: 0 0 20px 0;
+    }
+
+    .notification {
+        position: relative;
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        max-width: 400px;
+        height: 80px;
+        padding: 20px 15px;
+        border-radius: 10px;
+        background-color: #141519b6;
+        color: #f6f5f9;
+        box-shadow: 0 1px 10px rgba(0, 0, 0.1);
+        transform: translateY(30px);
+        opacity: 0;
+        visibility: hidden;
+        /* animation: fade 4s linear forwards; */
+    }
+    .notification .progress {
+        position: relative;
+        left: 5px;
+        bottom: 5px;
+        width: 10px;
+        height: 3px;
+        background: linear-gradient(to right, #7ad7ff, #2164ff);
+        border-radius: 5px;
+        z-index: 100;
+        /* animation: progressBar 3s .25s linear forwards; */
+    }
+    @keyframes fade {
+        5% {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+        60% {
+            background-color: #141519b6;
+        }
+        70% {
+            background-color: #00834e;
+        }
+        80% {
+            opacity: 1;
+            transform: translateY(0px);
+            background-color: #00af69;
+            color: #000;
+        }
+        95% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+    @keyframes progressBar {
+        to {
+            width: calc(100% - 10px);
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .title {
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        section {
+            background-size: 1200px;
+        }
+        .contactFormCard {
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        section {
+            background-size: 1000px;
+        }
+
+        .socialIcon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+</style>

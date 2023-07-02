@@ -1,0 +1,130 @@
+---
+import LogoIcon from "../components/LogoIcon.astro";
+
+import django from "../assets/Logos_tech/django-logo-240.png";
+import javascript from "../assets/Logos_tech/javascript-logo-240.png";
+import cafe from "../assets/Logos_tech/coffee-bean-solid-240.png";
+import html5 from "../assets/Logos_tech/html5-logo-240.png";
+import email from "../assets/Logos_tech/mail-send-regular-240.png";
+import stripe from "../assets/Logos_tech/stripe-logo-240.png";
+import css3 from "../assets/Logos_tech/css3-logo-240.png";
+import sass from "../assets/Logos_tech/sass-logo-240.png";
+import git from "../assets/Logos_tech/git-logo-240.png";
+import react from "../assets/Logos_tech/react-logo-240.png";
+import github from "../assets/Logos_tech/github-logo-240.png";
+import postgresql from "../assets/Logos_tech/postgresql-logo-240.png";
+import nextjs from "../assets/Logos_tech/next-js.256x256.png";
+import postman from "../assets/Logos_tech/postman.256x256.png";
+import paypal from "../assets/Logos_tech/paypal-logo-240.png";
+import typescript from "../assets/Logos_tech/typescript-logo-240.png";
+import figma from "../assets/Logos_tech/figma-logo-240.png";
+import astrojs from "../assets/Logos_tech/astro-light.svg";
+
+const skillsArr = [
+    { title: "Django", img: django },
+    { title: "Javascript", img: javascript },
+    { title: "Coffee", img: cafe },
+    { title: "HTML5", img: html5 },
+    { title: "Email", img: email },
+    { title: "Stripe", img: stripe },
+    { title: "Css3", img: css3 },
+    { title: "Sass", img: sass },
+    { title: "Git", img: git },
+    { title: "React", img: react },
+    { title: "GitHub", img: github },
+    { title: "Postgesql", img: postgresql },
+    { title: "Nextjs", img: nextjs },
+    { title: "Postman", img: postman },
+    { title: "Paypal", img: paypal },
+    { title: "TypeScript", img: typescript },
+    { title: "Figma", img: figma },
+    { title: "AstroJs", img: astrojs },
+];
+---
+
+<section id="Skills">
+    <div class="skillsSet">
+        <h2>Skills, Frameworks, services and coffee</h2>
+        <div class="skillsGroup">
+            {
+                skillsArr.map((card) => {
+                    return <LogoIcon title={card.title} image={card.img} />;
+                })
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        height: 100%;
+        width: 100vw;
+        background-color: #f2f2f2;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+    }
+    .skillsSet {
+        width: var(--container-width);
+        background-color: rgba(255, 255, 255, 0.637);
+
+        margin: 0 auto;
+        padding: 0 60px 60px 60px;
+        box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+    }
+    .skillsGroup {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        h2 {
+            font-size: 40px;
+        }
+        .skillsSet {
+            padding: 0 40px 40px 40px;
+        }
+        .skillsGroup {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .skillsGroup {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+
+            gap: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        h2 {
+            font-size: 24px;
+        }
+        .skillsGroup {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: .5rem;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        h2 {
+            font-size: 20px;
+        }
+        .skillsGroup {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: .5rem;
+        }
+    }
+</style>

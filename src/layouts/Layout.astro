@@ -1,0 +1,33 @@
+---
+import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
+import BaseHead from "./BaseHead.astro";
+
+const {title} = Astro.props;
+ 
+
+ 
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<BaseHead title={title} description="Frontend Developer Portfolio"/>
+	<body>
+		<!-- <Navbar/> -->
+		<slot />
+		<!-- <Footer/> -->
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent-gradient: linear-gradient(45deg, #7fd9fc, #c47ffc 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

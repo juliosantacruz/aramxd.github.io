@@ -1,0 +1,112 @@
+---
+import logo from "../assets/logo_450x200_azul_trans.png";
+---
+
+<header>
+    <nav>
+        <a href="#Hero" class="logoNavbar">
+            <img src={logo} alt="logo" class="logo" /></a
+        >
+        <a href="#AboutMe" class="linkNavbar"> About Me</a>
+        <a href="#Skills" class="active linkNavbar"> Skills</a>
+        <a href="#Projects" class="linkNavbar"> Projects</a>
+        <a href="#Contact" class="linkNavbar"> Contact</a>
+    </nav>
+</header>
+
+<style>
+    header {
+        width: 80vw;
+        margin: 30px auto;
+
+        position: sticky;
+        top: 20px;
+        z-index: 10;
+    }
+    nav {
+        /* margin: 30px 0; */
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+    .linkNavbar {
+        width: 18%;
+    }
+    .logo {
+        width: auto;
+        height: 60px;
+    }
+    a {
+        /* width: 120px; */
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0);
+        line-height: 60px;
+        font-size: 20px;
+        /* box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.1); */
+        text-align: center;
+        text-decoration: none;
+    }
+    .active {
+        border-bottom: 3px solid black;
+    }
+    @media screen and (max-width: 1024px) {
+        nav {
+            /* margin: 30px 0; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            width: auto;
+            height: 40px;
+        }
+        a {
+            /* width: 120px; */
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0);
+            line-height: 40px;
+
+            /* box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            width: 90vw;
+        }
+        a {
+            font-size: 16px;
+             
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        a {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .logo {
+            width: auto;
+            height: 30px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+    }
+</style>
