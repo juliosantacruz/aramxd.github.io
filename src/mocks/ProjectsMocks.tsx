@@ -12,6 +12,7 @@ import p_presentation from "../assets/imgProjects_min/p_presentation.jpg";
 import p_apiMovies from "../assets/imgProjects_min/p_apimovies.jpg";
 import p_searchGif from "../assets/imgProjects_min/p_SearchGif.jpg";
 import p_lewallet from "../assets/imgProjects_min/p_lewallet.png";
+import p_iqeaPage from "../assets/imgProjects_min/p_iqea_page.png";
 
 import django from '../assets/Logos_tech/django-logo-240.png'
 import javascript from '../assets/Logos_tech/javascript-logo-240.png'
@@ -36,13 +37,31 @@ const projects = [
   {
     id: 'a',
     type: "profesional",
+    title: "IQEA Page",
+    url: "https://iqea-page.vercel.app//",
+    stack: [
+      { name:'' ,icon:postgresql },
+      { name:'' ,icon:nextjs },
+      { name:'', icon: typescript },
+      { name:'' ,icon:postman },
+      { name:'' ,icon:figma },
+      { name:'' ,icon:git },
+
+    ],
+    imgProject: p_iqeaPage,
+    language: "Español / Spanish",
+
+  },  {
+    id: 'b',
+    type: "profesional",
     title: "Le-Wallet-App",
     url: "https://le-wallet.vercel.app/",
-    stack: [
-      { name:'React' ,icon:react },
+    stack: [      
       { name:'Sass' ,icon:sass },
       { name:'Next' ,icon:nextjs },
       { name:'GitHub', icon: github },
+      { name:'Coffe' ,icon:cafe },
+
     ],
     imgProject: p_lewallet,
     language: "English / Ingles",
@@ -51,12 +70,12 @@ const projects = [
     id: 1,
     type: "profesional",
     title: "Quimikal Academy",
-    url: "https://quimikal.com/",
+    url: "https://github.com/juliosantacruz/quimikal_project",
     stack: [
-      { name:'HTML' ,icon:html5 },
-      { name:'CSS' ,icon:css3 },
-      { name:'JS' ,icon:javascript },
       { name:'React', icon: react },
+      { name:'JS' ,icon:javascript },
+      { name:'CSS' ,icon:css3 },
+      { name:'Paypal' ,icon:paypal },
     ],
     imgProject: p_quimikal,
     language: "Español / Spanish",
