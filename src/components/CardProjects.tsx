@@ -22,7 +22,7 @@ const CardProjects = ({ data }: any) => {
       <div className="CardFooter">
         <p>{data.language}</p>
         
-        <a href={data.url} target="_blank">🔅 View Live</a>
+        <a href={data.url} target="_blank">{data.btnLabel}</a>
       </div>
     </article>
   );
