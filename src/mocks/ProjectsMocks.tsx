@@ -38,7 +38,7 @@ const projects = [
   {
     id: "a",
     type: "profesional",
-    title: "Proconst App",
+    title: "IQEA Page",
     btnLabel:"🔥 View Live",
     url: "https://iqea-page.vercel.app/",
     stack: [
@@ -55,7 +55,7 @@ const projects = [
   {
     id: "p_proconst",
     type: "profesional",
-    title: "IQEA Page",
+    title: "Proconst App",
     btnLabel:"🔥 View Live",
     url: "https://juliosantacruz.dev/proconst/",
     stack: [
