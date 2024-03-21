@@ -43,7 +43,6 @@ export default function Sliders({ type }: any) {
             slidesPerView: 3.2,
           },
         }}
-         
         navigation
       >
         {projects.map((element: any) => {

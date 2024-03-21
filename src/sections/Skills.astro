@@ -40,13 +40,14 @@ const skillsArr = [
     { title: "Figma", img: figma },
     { title: "AstroJs", img: astrojs },
 ];
+ 
 ---
 
 <section id="Skills">
     <div class="skillsSet">
         <h2>Skills, Frameworks, services and coffee</h2>
         <div class="skillsGroup">
-            {
+            {   
                 skillsArr.map((card) => {
                     return <LogoIcon title={card.title} image={card.img} />;
                 })
@@ -54,6 +55,8 @@ const skillsArr = [
         </div>
     </div>
 </section>
+
+ 
 
 <style>
     section {
@@ -76,11 +79,14 @@ const skillsArr = [
     }
     .skillsGroup {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr;
+        /* display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr; */
         justify-items: center;
-        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* gap: 2rem; */
     }
     h2 {
         font-size: 50px;
@@ -93,39 +99,39 @@ const skillsArr = [
         .skillsSet {
             padding: 0 40px 40px 40px;
         }
-        .skillsGroup {
+        /* .skillsGroup {
             grid-template-columns: repeat(6, 1fr);
             gap: 1rem;
-        }
+        } */
     }
 
     @media screen and (max-width: 768px) {
-        .skillsGroup {
+        /* .skillsGroup {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr;
 
             gap: 1rem;
-        }
+        } */
     }
 
     @media screen and (max-width: 425px) {
         h2 {
             font-size: 24px;
         }
-        .skillsGroup {
+        /* .skillsGroup {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr;
             gap: .5rem;
-        }
+        } */
     }
     @media screen and (max-width: 320px) {
         h2 {
             font-size: 20px;
         }
-        .skillsGroup {
+        /* .skillsGroup {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr;
             gap: .5rem;
-        }
+        } */
     }
 </style>
