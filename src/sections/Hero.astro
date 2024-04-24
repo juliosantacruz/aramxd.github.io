@@ -1,154 +1,203 @@
 ---
 import background from "../assets/HeroBackground.jpg";
 // import CardQuotes from "../components/CardQuotes.astro";
+import jsLogo from "../assets/logo_450x200_azul_trans.png";
 ---
 
 <section id="Hero" style={`background-image:url(${background})`}>
+  <div class="heroCard">
     <div class="title">
-        <h1>Julio Santacruz <span class="text-gradient">WebDev</span></h1>
-        <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
+      <h1>
+        <span class="italicText">Hi, I'm </span>
+        <br />
+        Julio Santacruz
+        <br />
+        <span class="italicText">and I'm a </span>
+        <br />
+        <span class="text-gradient">Web Developer</span>
+      </h1>
+      <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
     </div>
-    <div class="quotes">
-        <!-- <CardQuotes/> -->
+    <div class="logo">
+      <!-- <CardQuotes/> -->
+      <img src={jsLogo} alt="" class="jsLogo" />
     </div>
+  </div>
 </section>
 
 <style>
-    #Hero {
-        height: 100vh;
-        width: 100vw;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        
-        animation: pan-hero-img 20s linear infinite;
+  #Hero {
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: pan-hero-img 20s linear infinite;
+  }
+
+  @keyframes pan-hero-img {
+    /* recorrido 1 */
+    0% {
+      background-position: 50% 0%;
+      background-size: cover;
+    }
+    50% {
+      background-position: 50% 70%;
+      background-size: cover;
+    }
+    /* recorrido 2 */
+
+    50.0001% {
+      background-position: 50% 70%;
+      background-size: cover;
     }
 
-    @keyframes pan-hero-img {
-        /* recorrido 1 */
-        0%{
-            background-position: 50% 0%;
-            background-size: cover;
-        }
-        50% {
-            background-position: 50% 70%;
-            background-size: cover;
-        }
-        /* recorrido 2 */
+    100% {
+      background-position: 50% 0%;
+      background-size: cover;
+    }
+  }
+  .heroCard {
+    position: relative;
+    top: 30%;
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    background-color: rgba(150, 150, 150, 0.6);
+    border-radius: 30px;
 
-        50.0001% {
-            background-position: 50% 70%;
-            background-size: cover;
-        }
-        
-        100% {
-            background-position: 50% 0%;
-            background-size: cover;
-        }
-        
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+  }
+  .jsLogo {
+    width: 80%;
+    height: auto;
+  }
+  .title {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 40px;
+    margin: 20px 0 10px 0;
+    color: aliceblue;
+  }
+  p {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+    font-weight: 600;
+  }
+  .italicText {
+    font-weight: 300;
+    font-size: 30px;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .heroCard {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+    .logo {
+      width: 60%;
+
+      display: flex;
+      justify-content: center;
+    }
+    .title {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .jsLogo {
+      width: 100%;
+    }
+    .title {
+      /* width: 80%; */
+      /* padding: 10px; */
+      border-radius: 10px;
+    }
+    @keyframes pan-hero-img {
+      /* recorrido 1 */
+      0% {
+        background-position: 30% 50%;
+        background-size: cover;
+      }
+      50% {
+        background-position: 70% 70%;
+        background-size: cover;
+      }
+      /* recorrido 2 */
+
+      50.0001% {
+        background-position: 70% 70%;
+        background-size: cover;
+      }
+
+      100% {
+        background-position: 30% 5%;
+        background-size: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .heroCard {
+      width: 60%;
+      padding: 20px;
+      border-radius: 20px;
+
     }
 
     .title {
-        position: relative;
-        top: 30%;
-        width: 55%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        background-color: rgba(150, 150, 150, 0.6);
-        border-radius: 30px;
+      width: 80%;
+      border-radius: 20px;
+      /* padding: 10px; */
     }
     h1 {
-        font-size: 40px;
-        margin: 20px 0 10px 0;
-        color: aliceblue;
+      font-size: 24px;
+      margin: 10px 0 10px 0;
+      color: aliceblue;
+    }.italicText {
+      font-size: 20px;
     }
     p {
-        font-size: 20px;
-        margin: 10px 0 20px 0;
-        font-weight: 600;
+      font-size: 18px;
+      margin: 10px 0 20px 0;
+      padding: 0 5px;
+      text-align: center;
+      font-weight: 500;
     }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
+  }
+  @media screen and (max-width: 320px) {
+    .title {
+      width: 80%;
+      border-radius: 20px;
+      padding: 10px;
     }
-
-    @media screen and (max-width: 1024px) {
-        .title {
-            width: 60%;
-        }
+    h1 {
+      font-size: 22px;
     }
-
-    @media screen and (max-width: 768px) {
-        .title {
-            width: 80%;
-            padding: 10px;
-            border-radius: 10px;
-
-        }@keyframes pan-hero-img {
-        /* recorrido 1 */
-        0%{
-            background-position: 30% 50%;
-            background-size: cover;
-        }
-        50% {
-            background-position: 70% 70%;
-            background-size: cover;
-        }
-        /* recorrido 2 */
-
-        50.0001% {
-            background-position: 70% 70%;
-            background-size: cover;
-        }
-        
-        100% {
-            background-position: 30% 5%;
-            background-size: cover;
-        }
-        
+    p {
+      font-size: 18px;
     }
-    }
-
-    @media screen and (max-width: 425px) {
-        .title {
-            width: 80%;
-            border-radius: 20px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 1.6rem;
-            margin: 20px 0 10px 0;
-            color: aliceblue;
-        }
-        p {
-            font-size: 18px;
-            margin: 10px 0 20px 0;
-            padding: 0 20px;
-            text-align: center;
-            font-weight: 500;
-        }
-        
-    }
-    @media screen and (max-width: 320px) {
-        .title {
-            width: 80%;
-            border-radius: 20px;
-            padding: 10px;
-        }
-        h1 {
-            font-size: 22px;
-            
-        }
-        p {
-            font-size: 16px;
-           
-        }
-    }
+  }
 </style>

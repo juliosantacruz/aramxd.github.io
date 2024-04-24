@@ -1,0 +1,114 @@
+---
+import ProjectMaganerImg from "../assets/Diplomas/Certificado Project Manager-min.png";
+import DjangoDeveloperImg from "../assets/Diplomas/Django Developer-min.png";
+import FrontendDeveloperImg from "../assets/Diplomas/Frontend developer-min.png";
+import FullstackJsImg from "../assets/Diplomas/FullStack Developer-min.png";
+import InicioUXImg from "../assets/Diplomas/Primeros Pasos UX-min.png";
+import ResponsiveDesignImg from "../assets/Diplomas/Responsive Desing-min.png";
+
+const CertificatesArr = [
+  {
+    title: "Gestion de Proyectos de Google",
+    img: ProjectMaganerImg,
+    url: "",
+    year: "",
+  },
+  {
+    title: "Become a Django Developer",
+    img: DjangoDeveloperImg,
+    url: "",
+    year: "",
+  },
+  {
+    title: "Frontend Developer",
+    img: FrontendDeveloperImg,
+    url: "",
+    year: "",
+  },
+  {
+    title: "Full Stack Javascript Developer",
+    img: FullstackJsImg,
+    url: "",
+    year: "",
+  },
+  {
+    title: "Primeros Pasos en Procesos de diseño UX",
+    img: InicioUXImg,
+    url: "",
+    year: "",
+  },
+  {
+    title: "Responsive Web Design",
+    img: ResponsiveDesignImg,
+    url: "",
+    year: "",
+  },
+];
+---
+
+<section id="My-Certificates">
+  <h2>Certificates</h2>
+
+  <div class="certficatesGroups">
+    {
+      CertificatesArr.map((diploma) => {
+        return <img src={diploma.img} class="leDiploma" />;
+      })
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f2f2f2;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+        font-size: 50px;
+    }
+  .certficatesGroups {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .leDiploma {
+    width: 30%;
+  }
+  .leDiploma:hover {
+    transition: 1s;
+    transform: scale(1.8);
+    transform-origin: center;
+    z-index: 200;
+  }
+
+  @media screen and (max-width: 768px) {
+    .certficatesGroups {
+      width: 90%;
+    }
+    .leDiploma {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .certficatesGroups {
+      width: 90%;
+    }
+    .leDiploma {
+      width:80%;
+    }
+    .leDiploma:hover {
+    transition: 1s;
+    transform: scale(1.4);
+    transform-origin: center;
+    z-index: 200;
+  }
+  }
+</style>
