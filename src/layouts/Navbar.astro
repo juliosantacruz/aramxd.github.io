@@ -10,6 +10,7 @@ import logo from "../assets/logo_450x200_azul_trans.png";
     <a href="#AboutMe" class="linkNavbar"> About Me</a>
     <a href="#Skills" class="linkNavbar"> Skills</a>
     <a href="#Projects" class="linkNavbar"> Projects</a>
+    <a href="#Certificates" class="linkNavbar"> Certificates</a>
     <a href="#Contact" class="linkNavbar"> Contact</a>
   </nav>
 </header>
@@ -137,7 +138,9 @@ import logo from "../assets/logo_450x200_azul_trans.png";
     }
     a {
       font-size: 16px;
-    }
+    }.linkNavbar {
+    width: auto;
+  }
   }
 
   @media screen and (max-width: 425px) {
@@ -152,5 +155,13 @@ import logo from "../assets/logo_450x200_azul_trans.png";
     }
   }
   @media screen and (max-width: 320px) {
+    header {
+      width: 95vw;
+    }
+  .logo {
+      width: auto;
+      height: 25px;
+    }
+
   }
 </style>
