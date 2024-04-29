@@ -2,84 +2,99 @@
 import Sliders from "../components/SlidersProjects";
 import SlidersDevTo from "../components/SlidersDevTo";
 
-
-const response = await fetch('https://dev.to/api/articles?username=julio_santacruz')
-const devToPost = await response.json()
-
-
+const response = await fetch(
+  "https://dev.to/api/articles?username=julio_santacruz"
+);
+const devToPost = await response.json();
 ---
 
 <section id="Projects">
   <div class="topWave">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
     </svg>
-</div>
-    <div class="ProjectWrapper">
-        <div class="ProjectSlider">
-            <h3>Latest Projects / Demos...</h3>
-            <Sliders type="profesional" client:visible />
-        </div>
-        <!-- <div class="ProjectSlider">
+  </div>
+  <div class="ProjectWrapper">
+    <div class="ProjectSlider">
+      <h3>Latest Projects / Demos...</h3>
+      <Sliders type="profesional" client:visible />
+    </div>
+    <!-- <div class="ProjectSlider">
             <h3>React Projects...</h3>
             <Sliders type="react" client:visible />
         </div> -->
 
-        <div class="ProjectSlider">
-            <h3>DevTo Posts...</h3>
-            <SlidersDevTo data={devToPost} client:visible />
-        </div>
+    <div class="ProjectSlider">
+      <h3>DevTo Posts...</h3>
+      <SlidersDevTo data={devToPost} client:visible />
     </div>
-    <div class="bottomWave">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-      </svg>
+  </div>
+  <div class="bottomWave">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
   </div>
 </section>
 
 <style>
-    section {
-      position: relative;
-        height: 100%;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  section {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .ProjectWrapper {
+    width: var(--container-width);
+    height: 100%;
+    margin: 40px auto;
+  }
+  h3 {
+    font-size: 40px;
+    margin: 40px 0 10px 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    h3 {
+      font-size: 30px;
+      margin: 30px 0 10px 0;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    h3 {
+      font-size: 24px;
+      margin: 25px 0 10px 0;
     }
     .ProjectWrapper {
-        width: var(--container-width);
-        height: 100%;
-        margin: 40px auto;
+      width: 85%;
     }
-    h3 {
-        font-size: 40px;
-        margin: 40px 0 10px 0;
-    }
+  }
+  @media screen and (max-width: 320px) {
+  }
 
-    @media screen and (max-width: 1024px) {
-    }
-
-    @media screen and (max-width: 768px) {
-        h3 {
-            font-size: 30px;
-            margin: 30px 0 10px 0;
-        }
-    }
-
-    @media screen and (max-width: 425px) {
-        h3 {
-            font-size: 24px;
-            margin: 25px 0 10px 0;
-        }
-        .ProjectWrapper {
-            width: 85%;
-        }
-    }
-    @media screen and (max-width: 320px) {
-    }
-
-    .bottomWave {
+  .bottomWave {
     /* position: absolute; */
     bottom: 0;
     left: 0;
@@ -87,20 +102,20 @@ const devToPost = await response.json()
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
+  }
 
-.bottomWave svg {
+  .bottomWave svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 98px;
-}
+  }
 
-.bottomWave .shape-fill {
+  .bottomWave .shape-fill {
     fill: #f2f2f2;
-}
+  }
 
-.topWave {
+  .topWave {
     /* position: absolute; */
     bottom: 0;
     left: 0;
@@ -108,16 +123,16 @@ const devToPost = await response.json()
     overflow: hidden;
     line-height: 0;
     transform: rotate(0);
-}
+  }
 
-.topWave svg {
+  .topWave svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 98px;
-}
+  }
 
-.topWave .shape-fill {
+  .topWave .shape-fill {
     fill: #f2f2f2;
-}
+  }
 </style>

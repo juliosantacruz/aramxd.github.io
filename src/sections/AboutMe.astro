@@ -1,17 +1,19 @@
 ---
 import imageRocket from "../assets/Startup_Monochromatic.png";
+
+const resumeLink = 'https://drive.google.com/file/d/16PEhOfWZTLEuXrbgoOr4Vy7cEZXcpGiC/view?usp=sharing'
 ---
 
 <section id="AboutMe">
     <div class="AboutMe">
         <div class="aboutMeImage">
-            <img src={imageRocket} alt="" />
+            <img src={imageRocket} alt="about-me image" />
         </div>
 
         <div class="content">
             <h2>Hello, My name is Julio Santacruz, I'm a web developer</h2>
             <p>Let me help you with your project</p>
-            <a href="https://drive.google.com/file/d/1moeWPjBphzyKJLIIX4BtnKeL_-JHw1PQ/view?usp=drive_link" class="resume-btn" target="_blank">Download Resume</a>
+            <a href={resumeLink} class="resume-btn" target="_blank">Download Resume</a>
         </div>
     </div>
 </section>
@@ -41,7 +43,7 @@ import imageRocket from "../assets/Startup_Monochromatic.png";
         width: 100%;
     }
     .content {
-        width: 50%;
+        width: 45%;
         height: 500px;
         display: flex;
         flex-direction: column;
@@ -91,11 +93,11 @@ import imageRocket from "../assets/Startup_Monochromatic.png";
     }
 
     @media screen and (max-width: 425px) {
-      
+
         h2 {
             font-size: 24px;
         }
-        
+
         .content {
             width: 100%;
             height: 40%;
