@@ -48,7 +48,7 @@ const skillsArr = [
         <h2>Skills, Frameworks, services and coffee</h2>
         <div class="skillsGroup">
             {
-                skillsArr.map((card) => {
+                skillsArr.sort(() => Math.random() - 0.5).map((card) => {
                     return <LogoIcon title={card.title} image={card.img} />;
                 })
             }

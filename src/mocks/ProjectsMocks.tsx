@@ -13,6 +13,7 @@ import p_apiMovies from "../assets/imgProjects_min/p_apimovies.jpg";
 import p_searchGif from "../assets/imgProjects_min/p_SearchGif.jpg";
 import p_lewallet from "../assets/imgProjects_min/p_lewallet.png";
 import p_iqeaPage from "../assets/imgProjects_min/p_iqea_page.png";
+import p_medmania from "../assets/imgProjects_min/p_medmania.png"
 import p_proconst from "../assets/imgProjects_min/p_proconst.png";
 
 import django from "../assets/Logos_tech/django-logo-240.png";
@@ -36,6 +37,21 @@ import astrojs from "../assets/Logos_tech/astro-light.svg";
 
 const projects = [
   {
+    id: "MedMania",
+    type: "profesional",
+    title: "MedMania",
+    btnLabel:"🔥 View Live",
+    url: "https://medmania.xyz/",
+    stack: [
+      { name: "", icon: typescript },
+      { name: "", icon: react },
+      { name: "", icon: django },
+      { name: "", icon: figma },
+      { name: "", icon: github },
+    ],
+    imgProject: p_medmania,
+    language: "Español / Spanish",
+  },{
     id: "a",
     type: "profesional",
     title: "IQEA Page",

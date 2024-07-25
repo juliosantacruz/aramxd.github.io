@@ -21,7 +21,7 @@ export default function Sliders({ type }: any) {
   return (
     <div>
       <Swiper
-        slidesPerView={1.1}
+        slidesPerView={1.15}
         spaceBetween={10}
         slidesPerGroup={1}
         breakpoints={{
@@ -30,16 +30,26 @@ export default function Sliders({ type }: any) {
             slidesPerView: 1.3,
           },
           // when window width is >= 768px
+          500: {
+            slidesPerView: 1.4,
+          },
+          // when window width is >= 768px
+          650: {
+            slidesPerView: 1.7,
+          },
+          // when window width is >= 768px
           768: {
             slidesPerView: 2,
           },
+           // when window width is >= 768px
+          900: {
+            slidesPerView: 2.2,
+          },
           // when window width is >= 1024px
           1024: {
-            spaceBetween: 10,
             slidesPerView: 2.5,
           },
           1280: {
-            slidesPerGroup: 2,
             slidesPerView: 3.2,
           },
         }}
